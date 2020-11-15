@@ -227,10 +227,7 @@ if session == "Overview":
     st.subheader('Overview of cases in map')
     st.altair_chart(output3, use_container_width=True)
 
-    with st.beta_expander("See explanation"):
-        st.write("""
-             The percentage change was calculated by.
-         """)
+    
 
 elif session == "State Level Comparison":
     st.title('Part II: Policy Comparison on State Level')
