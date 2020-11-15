@@ -224,8 +224,15 @@ if session == "Overview":
         type='albersUsa'
     )
 
-    st.subheader('Overview of cases in map')
+    st.write('**Overview of cases in map at**',max(df1.submission_date).date())
     st.altair_chart(output3, use_container_width=True)
+
+    with st.beta_expander("About the data source"):
+        st.write("""
+             The data are updated in real time from the [CDC](https://data.cdc.gov/Case-Surveillance/United-States-COVID-19-Cases-and-Deaths-by-State-o/9mfq-cb36) of US.
+             And you can find the information of its API for python [here](https://dev.socrata.com/foundry/data.cdc.gov/9mfq-cb36).
+                          
+         """)
 
     
 
