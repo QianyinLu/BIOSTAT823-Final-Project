@@ -231,7 +231,9 @@ if session == "Overview":
         st.write("""
              The data are updated in real time from the [CDC](https://data.cdc.gov/Case-Surveillance/United-States-COVID-19-Cases-and-Deaths-by-State-o/9mfq-cb36) of US.
              And you can find the information of its API for python [here](https://dev.socrata.com/foundry/data.cdc.gov/9mfq-cb36).
-                          
+             This part was quoted from the CDC website:
+             >This aggregate dataset is structured to include daily numbers of confirmed and probable case and deaths reported to CDC by states over time. Because these provisional counts are subject to change, including updates to data reported previously, adjustments can occur. These adjustments can result in fewer total numbers of cases and deaths compared with the previous data, which means that new numbers of cases or deaths can include **negative** values that reflect such adjustments
+             
          """)
 
     
