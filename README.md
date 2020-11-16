@@ -46,7 +46,7 @@ No models used here.
 
 3.Predict case growth rate using hospital capacity, state demographic information and related policies based on Random forest.
 
-4.Explore how sex, age race and commodity affect the development of COVID-19 from a individual level
+4.Explore how sex, age race and commodity affect the development of COVID-19 from a individual level (Transform the data into SQL database; Used Stratified sampling in this part)
 
 
 
@@ -63,8 +63,16 @@ There are four parts of the dashboard: （每个插入实例图, 区别于2的�
 - Map plot showing total cases,  new cases, cases per million people, death per million people based the latest data.
 
 2.Comparison of the influence of policies on the increase rate of case among states
+- Top 5 states with worse/best policy performance based on 7/15 day ranges
+- Map plot showing the relative Increase Rate of individual states compare to the US
 
 3.Predict case growth rate using hospital capacity, state demographic information and related policies based on Random forest.
+- Feature Importance plot for the entire U.S. level
+- Actual VS Predicted daily case growth rate for each state
+- Feature Importance plot for the individual state level
+- Pie chart showing state's Sex ratio, race ratio 
+- Bar plot of age groups, data table of the state's demographic information 
 
 4.Explore how sex, age race and commodity affect the development of COVID-19 from a individual level
+- abi fill it here 
 
