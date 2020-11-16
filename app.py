@@ -276,6 +276,14 @@ elif session == "State Level Comparison":
         st.subheader(str(top)+' states that \"'+policy+'\" performs worst')
         st.altair_chart(bar2, use_container_width=True)
     
+    with st.beta_expander("Model Explaination"):
+        st.write("""
+             This model compares the average increase rate of total cases on each state 7/15 days before and after the implementation date of the certain policy. 7 days represents short term while 15 days represents long term. The average accuracy is computed by
+         """)
+        st.latex(r"""
+                    r_{average}=(\prod_{i=1}^{K}(1+r_i))^{\frac{1}{K}}-1
+                    """)
+    
     client = Socrata("data.cdc.gov", None)
     results = client.get("9mfq-cb36", limit=200000)
     df = pd.DataFrame.from_records(results)
@@ -347,7 +355,15 @@ elif session == "State Level Comparison":
 
     st.subheader('Relative Increase Rate in map')
     st.altair_chart(output3, use_container_width=True)
-
+    
+    with st.beta_expander("About the data source"):
+        st.write("""
+             The data are updated in real time from the [CDC](https://data.cdc.gov/Case-Surveillance/United-States-COVID-19-Cases-and-Deaths-by-State-o/9mfq-cb36) of US.
+             And you can find the information of its API for python [here](https://dev.socrata.com/foundry/data.cdc.gov/9mfq-cb36).
+             This part was quoted from the CDC website:
+             >This aggregate dataset is structured to include daily numbers of confirmed and probable case and deaths reported to CDC by states over time. Because these provisional counts are subject to change, including updates to data reported previously, adjustments can occur. These adjustments can result in fewer total numbers of cases and deaths compared with the previous data, which means that new numbers of cases or deaths can include **negative** values that reflect such adjustments
+         """)
+    
 elif session == "Case Level Prediction":
     
     st.title('Part III: Predict Covid19 Case Growth Rate')
