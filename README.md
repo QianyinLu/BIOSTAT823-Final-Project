@@ -54,7 +54,7 @@ No models used here.
 
 We used streamlit to build a dashboard to show our data and analysis results.
 
-There are four parts of the dashboard: （每个插入实例图, 区别于2的不同的表述，侧重于展示，我们放了什么图）
+There are four parts of the dashboard: 
 
 1.Overview of the COVID-19 cases and death cases by states in US (updated everyday)
 
