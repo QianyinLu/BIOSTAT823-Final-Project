@@ -74,5 +74,7 @@ There are four parts of the dashboard: （每个插入实例图, 区别于2的�
 - Bar plot of age groups, data table of the state's demographic information 
 
 4.Explore how sex, age race and commodity affect the development of COVID-19 from a individual level
-- abi fill it here 
-
+- Sampling process of original data
+- Tree plot of data specified by age_group
+- Death cases count/rate for each age group; Infection cases count/rate for each age group (faceted by gender)
+- Death cases count/rate for each race; Infection cases count/rate for each race (faceted by gender)
