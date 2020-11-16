@@ -321,7 +321,8 @@ elif session == "State Level Comparison":
     case_ = pd.concat([helper1(x) for x in np.unique(join["state"])],axis=0).reset_index(drop=True)
     case_.columns = ["date", "state", "inc_rate"]
 
-    df2 = pd.merge(case_, total_, on="date", how="left")
+    #df2 = pd.merge(case_, total_, on="date", how="left")
+    df2 = pd.merge(df_, total_, on="date", how="left")
     df2["diff"] = df2["inc_rate"] - df2["total_inc_rate"]
     df2.columns = ["date", 'state', "increase rate in state", "increase rate in US", "difference"]
 
