@@ -628,11 +628,11 @@ elif session == "Individual Level Analysis":
                 alt.X('race', axis=alt.Axis(title="Female")))
 
                 histogram_f = base_f.mark_bar().encode(
-                    alt.Y('count(medcond_yn):Q',axis=alt.Axis(title='total death count', titleColor='#5276A7')),
+                    alt.Y('count(medcond_yn):Q',axis=alt.Axis(title='total infection count', titleColor='#5276A7')),
                     color = 'race')
 
                 point_f = base_f.mark_line(point=True).encode(
-                    alt.Y('sum(density_race):O',axis=alt.Axis(title='average death rate', titleColor='#57A44C')))
+                    alt.Y('sum(density_race):O',axis=alt.Axis(title='average infection rate', titleColor='#57A44C')))
 
                 layer_f = alt.layer(histogram_f, point_f).resolve_scale(y = 'independent').properties(width=200,height = 400)
                 base_m = alt.Chart(ind[(ind['medcond_yn'] == 'Yes') & (ind['sex'] =='Male')]).encode(
@@ -683,11 +683,11 @@ elif session == "Individual Level Analysis":
                 alt.X('age_group', axis=alt.Axis(title=None)))
 
                 histogram = base.mark_bar().encode(
-                alt.Y('count(medcond_yn)',axis=alt.Axis(title='total death count', titleColor='#5276A7')),
+                alt.Y('count(medcond_yn)',axis=alt.Axis(title='total infection count', titleColor='#5276A7')),
                 color = 'sex')
 
                 point = base.mark_line(point=True).encode(
-                alt.Y('sum(density_age)',axis=alt.Axis(title='average death rate', titleColor='#57A44C')),color = 'sex')
+                alt.Y('sum(density_age)',axis=alt.Axis(title='average infection rate', titleColor='#57A44C')),color = 'sex')
 
                 layer = alt.layer(histogram,point).resolve_scale(y = 'independent').properties(width=500,height = 600)
                 st.write("""
