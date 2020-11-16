@@ -311,17 +311,6 @@ elif session == "State Level Comparison":
     total_ = total_[["submission_date_x", "inc_rate"]].dropna()
     total_.columns = ["date", "total_inc_rate"]
 
-    case = pd.read_csv("data/data/covid_19.csv")
-    case["submission_date"] = case["submission_date"].astype("datetime64")
-    case = case.loc[:, ["submission_date", "state", "tot_cases", "new_case"]]
-    case["lag_date"] = case["submission_date"].shift(1)
-    join = pd.merge(case, case, how="left", left_on = ["submission_date", "state"], right_on = ["lag_date", "state"])
-    join["inc_rate"] = join["new_case_y"] / join["tot_cases_x"] 
-    join = join.fillna(0)
-    case_ = pd.concat([helper1(x) for x in np.unique(join["state"])],axis=0).reset_index(drop=True)
-    case_.columns = ["date", "state", "inc_rate"]
-
-    #df2 = pd.merge(case_, total_, on="date", how="left")
     df2 = pd.merge(df_, total_, on="date", how="left")
     df2["diff"] = df2["inc_rate"] - df2["total_inc_rate"]
     df2.columns = ["date", 'state', "increase rate in state", "increase rate in US", "difference"]
