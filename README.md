@@ -78,3 +78,8 @@ There are four parts of the dashboard: （每个插入实例图, 区别于2的�
 - Tree plot of data specified by age_group
 - Death cases count/rate for each age group; Infection cases count/rate for each age group (faceted by gender)
 - Death cases count/rate for each race; Infection cases count/rate for each race (faceted by gender)
+
+### 4. Deployment
+Refer to this [GitHub](https://github.com/QianyinLu/finalproject1)   
+
+**Our final data product can be access from [here](https://final-project-823.herokuapp.com/)**
