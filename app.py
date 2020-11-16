@@ -559,17 +559,18 @@ elif session == "Individual Level Analysis":
     if selection == "Introduction":
         st.subheader('COVID-19 (Population Data)')
         st.write("""
-                    The population data we 
-                    很多废话
-                     
+                 In this part we decided to explore the relationship between the Covid-19 death/infection data and the population data. The original data is COVID-19 Case Surveillance Public Use Data collected by CDC. Population data include race, age as well as gender information. However, the original dataset is huge (over 1,500,000 individual observations) and is sorted by age groups (from 0-9 years to over 80 years). Considering the runtime of Streamlit, we have to sample from the original data. However, we cannot choose randomly or just slice one part of the data, since people in different age groups take different proportion of total population. We decided to take 5 percent of original data for each age group. The composition of the original data is:
                  """)
         st.image('img/tree2.png',use_column_width=True)
         st.write("""
-                    After the sampling
-                    继续废话
-                     
-                 """)
+             After the sampling 5 percent of each age group, the proportion of each age groups still maintain the same as the original data:
+            """)
         st.image('img/tree.png',use_column_width=True)
+        st.write("""
+             The visualization of the sample data should have a similar outcome as the visualization of the original data. Other variables such as race and gender is distributed randomly, therefore the sampling process based on age group should not have a major impact on them.
+             
+             Source of Data: https://data.cdc.gov/Case-Surveillance/COVID-19-Case-Surveillance-Public-Use-Data/vbim-akqf
+             """)
     if selection == "Visualization":
         alt.data_transformers.disable_max_rows()
 
