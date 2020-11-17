@@ -62,22 +62,43 @@ There are four parts of the dashboard:
 
 - Map plot showing total cases,  new cases, cases per million people, death per million people based the latest data.
 
+  ![png](img/part1.png)
+
 2.Comparison of the influence of policies on the increase rate of case among states
+
 - Top 5 states with worse/best policy performance based on 7/15 day ranges
+
 - Map plot showing the relative Increase Rate of individual states compare to the US
 
+  ![png](img/part2.png)
+
 3.Predict case growth rate using hospital capacity, state demographic information and related policies based on Random forest.
+
 - Feature Importance plot for the entire U.S. level
+
 - Actual VS Predicted daily case growth rate for each state
+
 - Feature Importance plot for the individual state level
+
 - Pie chart showing state's Sex ratio, race ratio 
+
 - Bar plot of age groups, data table of the state's demographic information 
 
+  ![png](img/part3.png)
+
+![png](img/part3_2.png)
+
 4.Explore how sex, age race and commodity affect the development of COVID-19 from a individual level
+
 - Sampling process of original data
+
 - Tree plot of data specified by age_group
+
 - Death cases count/rate for each age group; Infection cases count/rate for each age group (faceted by gender)
+
 - Death cases count/rate for each race; Infection cases count/rate for each race (faceted by gender)
+
+  ![png](img/part4.png)
 
 ### 4. Deployment
 Refer to this [GitHub](https://github.com/QianyinLu/finalproject1)   
