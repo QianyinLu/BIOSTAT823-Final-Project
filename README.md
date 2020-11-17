@@ -104,3 +104,17 @@ There are four parts of the dashboard:
 Refer to this [GitHub](https://github.com/QianyinLu/finalproject1)   
 
 **Our final data product can be access from [here](https://final-project-823.herokuapp.com/)**
+
+
+
+### 5.Related techniques used 
+
+- Random forest model
+- SQL database,database normalization
+- API
+- Interactive plot (altair,plotly)
+- pandas, numpy
+- streamlit
+- Functional programming
+- Stratified sampling
+
