@@ -116,5 +116,6 @@ Refer to this [GitHub](https://github.com/QianyinLu/finalproject1)
 - pandas, numpy
 - streamlit
 - Functional programming
-- Stratified sampling
+- Stratified samplin
+- Grid search
 
