@@ -109,13 +109,10 @@ Refer to this [GitHub](https://github.com/QianyinLu/finalproject1)
 
 ### 5.Related techniques used 
 
-- Random forest model
-- SQL database,database normalization
+- Random forest (with cross validation, grid search and feature importance computation)
+- SQL database, database normalization (also implementing stratified sampling)
 - API
-- Interactive plot (altair,plotly)
-- pandas, numpy
-- streamlit
+- Interactive plot (`altair`, `plotly`)
+- `numpy`, `pandas` manipulation
+- `streamlit`
 - Functional programming
-- Stratified samplin
-- Grid search
-
